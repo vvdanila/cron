@@ -67,7 +67,6 @@ if __name__ == '__main__':
     weekday = args[5]
     command = args[6:]
 
-
     print('Minute: ', schedule(minute, 'minutes'))
     print('Hour: ', schedule(hour, 'hours'))
     print('Day of the month: ', schedule(day, 'days'))

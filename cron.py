@@ -19,7 +19,11 @@ def schedule(value, frequency_type):
         return ' '.join([str(h) for h in range(first, last + 1)])
 
     if ',' in value:
-        return ' '.join(value.split(','))
+        values = value.split(',')
+        for v in values:
+            assert int(v) in range(first, last + 1), 'Value not in correct range'
+
+        return ' '.join(values)
 
     if '/' in value:
         details = value.split('/')
